@@ -10,6 +10,15 @@ namespace RadExercise1
     {
         static void Main(string[] args)
         {
+            using (TestDbContext db = new TestDbContext())
+            {
+                foreach(Club c in db.Clubs )
+                {
+                    Console.WriteLine(c.Info);
+                }
+                Console.ReadKey();
+            }
+             
         }
     }
 }
