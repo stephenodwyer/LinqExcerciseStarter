@@ -56,6 +56,15 @@ namespace RadExercise1
         }
         private void seedClubs()
         {
+            ClubEvent firstClub = new ClubEvent();
+            firstClub.attendees = new List<Member>();
+            firstClub.StartDateTime = DateTime.Now;
+            firstClub.EndDateTime = DateTime.Now.AddHours(3);
+            firstClub.Venue = "Orgasm Ville";
+
+            Member hoemor = new Member();
+            
+
             // Create a list of clubs and populate it test data
             Clubs = new List<Club>()
             // Club collection
