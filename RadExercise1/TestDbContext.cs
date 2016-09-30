@@ -63,6 +63,9 @@ namespace RadExercise1
             firstClub.Venue = "Orgasm Ville";
 
             Member hoemor = new Member();
+            hoemor.memberID = Guid.NewGuid();
+            hoemor.StudentID = Guid.NewGuid();
+            hoemor.approved = true;
             
 
             // Create a list of clubs and populate it test data
@@ -75,8 +78,8 @@ namespace RadExercise1
                 ClubName = "ITS FC",
                 // Select a random student
                 adminID = GetRandomAdmin(),
-                 ClubEvents = new List<ClubEvent>(),
-                 ClubMembers = new List<Member>(),
+                 ClubEvents = new List<ClubEvent>() { firstClub},
+                 ClubMembers = new List<Member>() { hoemor},
                    CreationDate = DateTime.Now
                     },
                 // Second Club record
